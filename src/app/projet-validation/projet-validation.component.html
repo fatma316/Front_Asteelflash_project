@@ -1,0 +1,115 @@
+<body>
+<div class="container">
+  <form>
+    <h2>Add Project Validation </h2>
+        <div class="row">
+
+    
+      </div>
+    <div class="row">
+    
+      <div class="col-md-6">
+        <div class="form-group">
+        
+          <label for="formGroupExampleInput">Methodiste Name</label>
+          <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="NomMethodiste" id="formGroupExampleInput"  placeholder="enter Methodist Name" >
+        </div>
+      </div>
+      </div>
+      <!--  col-md-6   -->
+    <div class="row">
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="formGroupExampleInput">validator N°1 </label>
+          <input type="text" class="form-control" [ngModelOptions]="{standalone: true}"[(ngModel)]="NomValidateur1" id="formGroupExampleInput" placeholder="enter validator name" >
+        </div>
+      </div>
+      <!--  col-md-6   -->
+
+
+      <div class="col-md-6">
+       <div class="form-group">
+          <label for="formGroupExampleInput">departement N°1</label>
+          <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="Dep1" id="formGroupExampleInput"  placeholder="enter deparment Name">
+        </div>
+        
+
+
+      </div>
+      <!--  col-md-6   -->
+
+      <div class="col-md-6">
+<div class="form-group">
+      
+          <label for="formGroupExampleInput">validator N°2</label>
+          <input type="text"  class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="NomValidateur2" id="formGroupExampleInput" placeholder="enter Validator Name" >
+        </div>
+       
+      </div>
+      <!--  col-md-6   -->
+       <div class="col-md-6">
+
+        <div class="form-group">
+          <label for="formGroupExampleInput">Departement N°2</label>
+          <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="Dep2" id="formGroupExampleInput" placeholder="enter departement Name">
+        </div>
+      </div>
+    </div>
+    <!--  row   -->
+
+
+    <div class="row">
+     
+      <!--  col-md-6   -->
+
+      <div class="col-md-6">
+
+        <div class="form-group">
+          <label for="formGroupExampleInput">Start Day </label>
+          <input type="date" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="date_deb"   id="formGroupExampleInput"  placeholder="enter Start Day">
+        </div>
+      </div>
+      <!--  col-md-6   -->
+    <!--  row   -->
+      <div class="col-md-6">
+
+        <div class="form-group">
+          <label for="formGroupExampleInput">End Day </label>
+          <input type="date" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="date_fin"   id="formGroupExampleInput"  placeholder="enter End Day">
+        </div>
+      </div>
+      <!--  col-md-6   -->
+
+    <div class="row">
+     
+      <!--  col-md-6   -->
+
+      <div class="col-md-6">
+
+        <div class="form-group">
+          <label for="formGroupExampleInput"> State </label>       
+       <select class="form-select" aria-label="select example"[ngModelOptions]="{standalone: true}" [(ngModel)]="etat" >
+        <option selected>Not Valid</option>
+                <option selected> Valid</option>
+
+    </select>
+    </div>
+      </div>
+      </div>
+
+      <!--  col-md-6   -->
+    </div>
+
+     <div class="form-group">
+    <label for="exampleFormControlFile1">file input</label>
+    <input type="file" class="form-control-file" (change)="uploadFile($event)" >
+  </div>
+    
+    
+
+
+   <button type="submit" class="btn btn-danger"  (click)="addEmployee()" >save </button>
+  </form>
+</div>
+</body>

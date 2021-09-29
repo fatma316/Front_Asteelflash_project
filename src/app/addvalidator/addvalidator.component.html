@@ -1,0 +1,38 @@
+<body>
+   <div class="container">
+      <div class="row justify-content-md-center">
+        <div >
+          <div class="sidenav"  id="mySidenav">
+               <a  id="add" routerLink="/addvalidator" data-toggle="tooltip" data-placement="bottom" title="add validator">
+                    add
+               </a>
+               
+          </div>
+           
+     </div>
+      <div id="content" class="col-6 align-self-center">       
+              
+               
+             
+              <div class="col-auto">
+                <label class="form-label" for="inputAddress"> E-mail </label>
+                <input type="text" [(ngModel)]="validateur.email" class="form-control" placeholder="E-mail">
+              </div>
+              <div class="col-auto">
+                <label class="form-label" for="inputAddress">Password</label>
+                <input type="text" [(ngModel)]="validateur.password" class="form-control" placeholder="Password">
+              </div>
+              <div class="col-auto">
+                <label class="form-label" for="inputAddress">Departement</label>
+                <input type="text" [(ngModel)]="validateur.Department" class="form-control" placeholder="Departement">
+              </div>
+            
+              <div class="col-12">
+                  <button type="button" class="btn btn-primary"(click)="goBack()">go back</button>
+                  <button type="button" class="btn btn-danger" (click)=save()>save </button>
+              </div>
+          </div>
+          </div>
+          </div>
+  </body>        
+

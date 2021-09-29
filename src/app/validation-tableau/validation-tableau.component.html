@@ -1,0 +1,75 @@
+<body>
+<div class="container">
+   <div class="row">
+        
+        <div >
+             <div class="sidenav"  id="mySidenav">
+                  <a  id="add" routerLink="/addProjet" data-toggle="tooltip" data-placement="bottom" title="Ajouter projet">
+                       add
+                  </a>
+                  <a id="home" routerLink="/dashboard">
+                     home
+                  </a>
+             </div>
+             
+              
+        </div>
+        <div class="col-10 align-self-center" >
+          
+        <h2 id="titre" class="align-self-center">Validations</h2>
+        <table class="table table-light table-striped table-hover">
+             
+             <thead>
+                  <tr>
+
+                    <th scope="col">Validator N°1 </th>
+                    <th scope="col"> Departement N°1 </th>
+                    <th scope="col">  </th>
+
+                    <th scope="col">Validator N°2 </th>
+                    <th scope="col"> Departement N°2 </th>
+                    <th scope="col"> </th>
+
+
+                     <th scope="col">file </th>
+
+                    <th scope="col"> Methodist </th>
+                    <th scope="col"> Start Date </th>
+                    <th scope="col"> End Date </th>
+
+                    <th scope="col">State </th>
+
+                  </tr>
+             </thead>
+             <tbody class="validations">
+        <tr *ngFor="let stg of EmployeeList">
+
+                      
+                       <td>{{stg.NomValidateur1}}</td>
+                       <td> {{stg.Dep1}}</td>
+                       <button class="btn btn-primary" >check</button>
+
+                       <td> {{stg.NomValidateur2}}</td>
+
+                       <td> {{stg.Dep2}}</td>
+                       <button class="btn btn-primary" >check</button>
+                      <td><a href="http://127.0.0.1:8000/SaveFile/{{stg.FileName}}" target="blanc_" ></a>  {{stg.FileName}}</td>
+
+                       <td> {{stg.NomMethodiste}}</td>
+                       <td> {{stg.date_deb}}</td>
+                       <td> {{stg.date_fin}}</td>
+                     <td>{{stg.etat}}</td>
+                     <td>{{stg.etat2}}</td>
+
+
+
+                     </tr> 
+             </tbody>
+        </table>
+        </div>
+
+        
+   </div>
+</div>
+
+</body>

@@ -1,0 +1,282 @@
+<head>
+    <meta charset="utf-8">
+    <h6 class="alpha20" >Dashboard</h6>
+    <base target="_self">
+    <meta name="description" content="A Bootstrap 4 admin dashboard theme that will get you started. The sidebar toggles off-canvas on smaller screens. This example also include large stat blocks, modal and cards. The top navbar is controlled by a separate hamburger toggle button."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" value="notranslate">
+    <link rel="shortcut icon" href="/images/cp_ico.png">
+  
+  
+    <!--stylesheets / link tags loaded here-->
+  
+  
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+  
+  
+    <style type="text/css">
+      
+    </style>
+  
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-fixed-top navbar-toggleable-sm navbar navbar-dark " style="background-color:#4b40ee;">
+      <img class="h" src="assets/img/logo_as.png" />
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="flex-row d-flex  ">
+        <a class="navbar-brand  mb-1 alpha21" routerLink="/dashboard_validator"> </a>
+        <button type="button" class="hidden-md-up navbar-toggler" data-toggle="offcanvas" title="Toggle responsive left sidebar">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+      </div>
+      <div class="navbar-collapse collapse" id="collapsingNavbar">
+        <ul class="navbar-nav alpha21">
+          <li class="nav-item active">
+            <a class="nav-link " href="#"><span class="sr-only "></span></a>
+          </li>
+          
+          
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="" data-target="#myModal" data-toggle="modal">Exit</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid  " id="main">
+      <div class="row row-offcanvas row-offcanvas-left ">
+        <div class="col-md-3 col-lg-2 sidebar-offcanvas  " id="sidebar" role="navigation">
+          <ul class="nav flex-column pl-1 ">
+           
+           
+          </ul>
+        </div>
+        <!--/col-->
+  
+        <div class="col-md-9 col-lg-10 main">
+  
+              <p class="hidden-md-up">
+                  <button type="button" class="btn btn-primary-outline btn-sm" data-toggle="offcanvas"><i class="fa fa-chevron-left"></i> Menu</button>
+              </p>
+  
+          <h1 class="display-2 hidden-xs-down">
+Operator space       </h1>
+          <p class="lead hidden-xs-down"></p>
+  
+          <div class="alert alert-warning fade collapse" role="alert" id="myAlert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                      <span class="sr-only">Close</span>
+                  </button>
+            
+          </div>
+  
+          <div class="row mb-3">
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-inverse alpha" href="#">
+                <div class="card-block alpha ">
+                  <div class="rotate">
+                    <i class="fa fa-user fa-5x " ></i>
+                  </div>
+                  <h6 class="text-uppercase " >Projets</h6>
+                  <h1 class="display-1" >{{nbProjet}}</h1>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-inverse alpha1" href="#" >
+                <div class="card-block alpha1">
+                  <div class="rotate">
+                    <i class="fa fa-list fa-4x"></i>
+                  </div>
+                  <h6 class="text-uppercase" >Methodists</h6>
+                  <h1 class="display-1">{{nbMethodiste}}</h1>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-inverse alpha2" href="#">
+                <div class="card-block alpha2">
+                  <div class="rotate">
+                    <i class="fa fa-twitter fa-5x"></i>
+                  </div>
+                  <h6 class="text-uppercase">operators</h6>
+                  <h1 class="display-1">{{nbOperateur}}</h1>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-inverse alpha3"href="#">
+                <div class="card-block alpha3">
+                  <div class="rotate">
+                    <i class="fa fa-share fa-5x"></i>
+                  </div>
+                  <h6 class="text-uppercase">validators</h6>
+                  <h1 class="display-1">{{nbValidation}}</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--/row-->
+  
+          
+          <a id="features"></a>
+          <hr>
+          <p class="lead" class="h5">          </p>
+  
+          <hr>
+          <div class="row mb-3">
+       
+            <div class="col-lg-9 col-md-8">
+              <div class="table-responsive">
+           <app-operateur-validation></app-operateur-validation>
+              </div>
+            </div>
+          </div>
+          
+         </div>
+      </div>
+  
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Modal</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                      <span class="sr-only">Close</span>
+                  </button>
+          </div>
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary-outline" data-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+          <div class="row">             
+              <div  class="col-4 offset-1 col-sm-2 alpha20"> 
+                  <h3>Links</h3>
+                  <ul class="list-unstyled alpha20" >
+                      <li ><a href="#"><div class="alpha21">Dashboard</div></a></li>
+                      <li><a href="https://www.asteelflash.com/"><div class="alpha21">About</div></a></li>
+                      <li><a href="#"><div class="alpha21">Menu</div></a></li>
+                      <li><a href="/dashboard"><div class="alpha21">Contact</div></a></li>
+                  </ul>
+              </div>
+              <div  class="col-7 col-sm-5"> 
+    
+                  <h3><div class="alpha20">Our Address</div></h3>
+                  <address>
+                    <div class="alpha20">
+                Asteelflash<br>
+                La Soukra<br>
+                Tunisia<br>
+                </div>
+                <div class="alpha20">
+                <i class="fa fa-phone fa-lg" ></i>: (+216) 36 066 015<br>
+
+                    <i class="fa fa-envelope fa-lg"></i>: 
+                    <a href="mailto:confusion@food.net" class="alpha20">https://www.asteelflash.com/</a>
+             </div>
+                  </address>
+              </div>
+              <div class="col-12 col-sm-4 align-self-center">
+                  <div class="text-center">
+                      <a class="btn btn-social-icon btn-google alpha20" href="http://google.com/+"><i class="fa fa-google-plus ga-lg"></i></a>
+                      <a class="btn btn-social-icon btn-facebook alpha20" href="https://www.facebook.com/Asteelflash.official/"><i class="fa fa-facebook fa-lg"></i></a>
+                      <a class="btn btn-social-icon btn-linkedin alpha20 "href="http://www.linkedin.com/company/asteelflash/mycompany/"><i class="fa fa-linkedin fa-lg"></i></a>
+                      <a class="btn btn-social-icon btn-twitter alpha20" href="https://twitter.com/asteelflash"><i class="fa fa-twitter fa-lg"></i></a>
+                      <a class="btn btn-social-icon btn-youtube alpha20" href="https://www.youtube.com/user/Asteelflash2012"><i class="fa fa-youtube fa-lg"></i></a>
+                      <a class="btn btn-social-icon alpha20 " href="mailto:"><i class="fa fa-envelope fa-lg"></i></a>
+                  </div>
+              </div>
+         </div>
+         <div class="row justify-content-center">             
+              <div class="col-auto alpha21">
+                  <p>© Copyright 2021 </p>
+              </div>
+         </div>
+      </div>
+  </footer>    
+    
+  
+  
+    <script>
+      // sandbox disable popups
+      if (window.self !== window.top && window.name != "view1") {
+        window.alert = function() {
+          /*disable alert*/
+        };
+        window.confirm = function() {
+          /*disable confirm*/
+        };
+        window.prompt = function() {
+          /*disable prompt*/
+        };
+        window.open = function() {
+          /*disable open*/
+        };
+      }
+      
+      // prevent href=# click jump
+      document.addEventListener(
+        "DOMContentLoaded",
+        function() {
+          var links = document.getElementsByTagName("A");
+          for (var i = 0; i < links.length; i++) {
+            if (links[i].href.indexOf("#") != -1) {
+              links[i].addEventListener("click", function(e) {
+                console.debug("prevent href=# click");
+                if (this.hash) {
+                  if (this.hash == "#") {
+                    e.preventDefault();
+                    return false;
+                  } else {
+                    /*
+                        var el = document.getElementById(this.hash.replace(/#/, ""));
+                        if (el) {
+                          el.scrollIntoView(true);
+                        }
+                        */
+                  }
+                }
+                return false;
+              });
+            }
+          }
+        },
+        false
+      );
+    </script>
+  
+    <!--scripts loaded here-->
+  
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+  
+  
+    <script>
+      $(document).ready(function() {
+        $("[data-toggle=offcanvas]").click(function() {
+          $(".row-offcanvas").toggleClass("active");
+        });
+      });
+    </script>
+  
+  
+  </body>
+  © 2021 GitHub, Inc.

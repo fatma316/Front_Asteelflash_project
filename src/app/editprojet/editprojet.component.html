@@ -1,0 +1,38 @@
+
+  
+<body>
+  <div class="container">
+      <div class="row justify-content-md-center">
+        <div >
+          <div class="sidenav"  id="mySidenav">
+               
+            
+          </div>
+
+              <div *ngIf="projet">       
+                <div class="form-group">
+                  <label for="formGroupExampleInput" class="form-label">Project Id</label>
+                  <input type="text" [(ngModel)]="projet.projectId"  class="form-control" id="formGroupExampleInput" placeholder="projectId">
+                </div>
+
+              <div class="form-group">
+                <label for="formGroupExampleInput" class="form-label">Project Name </label>
+                <input type="text" [(ngModel)]="projet.projectName" class="form-control" id="formGroupExampleInput" placeholder="projectName">
+              </div>
+
+                <div class="form-group">
+                <label for="formGroupExampleInput" class="form-label">REFName</label>
+                <input type="text" [(ngModel)]="projet.REFName" class="form-control" id="formGroupExampleInput" placeholder="REFName">
+              </div>
+
+                              <div class="form-group">
+                                                <button type="button" class="btn btn-primary" (click)="goBack()">go back</button>
+
+                  <button type="button" class="btn btn-danger"  (click)=save()>save </button>
+              </div>
+      </div>
+      </div>
+      </div>
+      </div>
+   
+</body> 

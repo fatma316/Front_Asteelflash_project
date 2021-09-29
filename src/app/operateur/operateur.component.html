@@ -1,0 +1,46 @@
+<body>
+<div class="container">
+    <div class="row">
+         
+         <div >
+              <div class="sidenav"  id="mySidenav">
+                   <a  id="add" routerLink="/addOperateur" data-toggle="tooltip" data-placement="bottom" title="Add Operator">
+                        add
+                   </a>
+                 
+              </div>
+              
+               
+         </div>
+         <div class="col-10 align-self-center" >
+         <h2 id="titre" class="align-self-center">Operators</h2>
+         <nav class="navbar">
+        <input class="form-control" type="text" name="Matricule" [(ngModel)]="Matricule" (ngModelChange)="Search()" placeholder="Search for Registration Number">
+        </nav>
+         <table class="table table-light table-striped table-hover">
+              
+              <thead>
+                   <tr>
+                     
+                     <th scope="col"> Operator ID  </th>
+                     <th scope="col">Registration Number</th>
+                     <th scope="col">Password</th>
+                     
+                   </tr>
+              </thead>
+              <tbody class="projets">
+                   <tr *ngFor="let stg of operateurs">
+                        <td><a id="nom" routerLink="/detailformateur/{{stg.Id}}">{{stg.Id}} </a></td>
+                        <td> {{stg.Matricule}}</td>
+                        <td> {{stg.password}}</td>
+                        <td> <button type="button" class="btn btn-primary" routerLink='/editOperateur/{{stg.Id}}'> Edit</button></td>
+                        <td><button type="button" class="btn btn-danger"  (click)="delete(stg)">Delete</button></td>
+                     
+                      </tr> 
+              </tbody>
+         </table>
+         </div>
+ 
+    </div>
+ </div>
+</body>

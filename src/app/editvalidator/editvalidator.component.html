@@ -1,0 +1,42 @@
+ 
+<body>
+  <div class="container">
+      <div class="row justify-content-md-center">
+        <div >
+          <div class="sidenav"  id="mySidenav">
+               
+               <a id="home" routerLink="/dashboard">
+                  home
+               </a>
+          </div>
+
+              <div *ngIf="validateur">       
+                <div class="form-group">
+                  <label for="formGroupExampleInput" class="form-label">Id validator</label>
+                  <input type="text" [(ngModel)]="validateur.Id"  class="form-control" id="formGroupExampleInput" placeholder="Id validator">
+                </div>
+
+              <div class="form-group">
+                <label for="formGroupExampleInput" class="form-label">E-mail</label>
+                <input type="text" [(ngModel)]="validateur.email" class="form-control" id="formGroupExampleInput" placeholder="E-mail">
+              </div>
+
+                <div class="form-group">
+                <label for="formGroupExampleInput" class="form-label">Password</label>
+                <input type="text" [(ngModel)]="validateur.password" class="form-control" id="formGroupExampleInput" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput" class="form-label">Departement</label>
+                <input type="text" [(ngModel)]="validateur.Department" class="form-control" id="formGroupExampleInput" placeholder="Departement">
+              </div>
+
+                              <div class="form-group">
+                  <button type="button" class="btn btn-danger"  (click)=save()>save </button>
+                  <button type="button" class="btn btn-primary" (click)="goBack()">go back</button>
+              </div>
+      </div>
+      </div>
+      </div>
+      </div>
+   
+</body> 

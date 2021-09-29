@@ -1,0 +1,24 @@
+<body>
+    <div class="container">
+        <div class="row align-items-start">
+            <div class="col">
+            <img class="h" src="assets/img/logo_as.png" />
+                <div class="col">
+                <div class="col-sm-7 ">
+                <div class="card">
+               <form (submit) = "login()" class="box">
+                        <h1 >Login</h1>
+                        <p class="cc"> Please enter your login and password!</p> 
+                        <input type="text" name="email" [(ngModel)]="methodiste.email" placeholder="E-mail"> 
+                        <input type="password" name="password" [(ngModel)]="methodiste.password"placeholder="Password"> 
+                        <a class="cc" href="#"></a> 
+                        <p style="color: red;">{{msgErreur}}</p>
+                        <input type="submit" name="submit" value="Login"> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>

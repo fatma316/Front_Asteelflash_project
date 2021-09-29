@@ -1,0 +1,51 @@
+<body>
+<div class="container">
+    <div class="row">
+         
+         <div >
+              <div class="sidenav"  id="mySidenav">
+                   <a  id="add" routerLink="/addvalidator" data-toggle="tooltip" data-placement="bottom" title="Add validator">
+                       add
+                  </a>
+                  
+              </div>
+              
+               
+         </div>
+         <div class="col-10 align-self-center" >
+<h2 id="titre" class="align-self-center">Validators</h2>
+  <nav class="navbar">
+        <input class="form-control" type="text" name="Department" [(ngModel)]="Department" (ngModelChange)="Search()" placeholder="Search for Departement">
+        </nav>
+         <table class="table table-light table-striped table-hover">
+              
+              <thead>
+                   <tr>
+                     
+                     <th scope="col"> Validator ID  </th>
+                     <th scope="col">E-mail</th>
+                     <th scope="col">Password</th>
+                     <th scope="col">Departement</th>
+                     
+                   </tr>
+              </thead>
+              <tbody class="validateurs">
+                   <tr *ngFor="let stg of validateurs">
+                        <td><a id="nom" routerLink="/detailformateur/{{stg.Id}}">{{stg.Id}} </a></td>
+                        <td> {{stg.email}}</td>
+                        <td> {{stg.password}}</td>
+                        <td>{{stg.Department}}</td>
+                        
+                        
+                                               <td> <button type="button" class="btn btn-primary" routerLink='/editvalidator/{{stg.Id}}'> Edit</button></td>
+ <td><button type="button" class="btn btn-danger"  (click)="delete(stg)">Delete</button></td>
+                      </tr> 
+              </tbody>
+         </table>
+         </div>
+ 
+         
+    </div>
+ </div>
+
+</body>

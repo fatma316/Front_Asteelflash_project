@@ -1,0 +1,183 @@
+body,
+html {
+  margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+   background-color: #ffffffde;
+    min-height: 100%;
+ min-width: 1024px;
+ width: 100%;
+ height:100%;
+ margin: 0px;
+ top: 0;
+ left: 0
+}
+/* workaround modal-open padding issue */
+
+body.modal-open {
+  padding-right: 0 !important;
+}
+
+#sidebar {
+  padding-left: 0;
+}
+/*
+* Off Canvas at medium breakpoint
+* --------------------------------------------------
+*/
+
+@media screen and (max-width: 48em) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+  .row-offcanvas-left .sidebar-offcanvas {
+    left: -33%;
+  }
+  .row-offcanvas-left.active {
+    left: 33%;
+    margin-left: -6px;
+  }
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 33%;
+    height: 100%;
+  }
+}
+/*
+* Off Canvas wider at sm breakpoint
+* --------------------------------------------------
+*/
+
+@media screen and (max-width: 34em) {
+  .row-offcanvas-left .sidebar-offcanvas {
+    left: -45%;
+  }
+  .row-offcanvas-left.active {
+    left: 45%;
+    margin-left: -6px;
+  }
+  .sidebar-offcanvas {
+    width: 45%;
+  }
+}
+
+.card {
+  overflow: hidden;
+   border-radius: 15px 50px;
+}
+
+.card-block .rotate {
+  z-index: 8;
+  float: right;
+  height: 100%;
+}
+
+.card-block .rotate i {
+  color: rgba(63, 59, 59, 0.15);
+  position: absolute;
+  left: 0;
+  left: auto;
+  right: -10px;
+  bottom: 0;
+  display: block;
+  -webkit-transform: rotate(-44deg);
+  -moz-transform: rotate(-44deg);
+  -o-transform: rotate(-44deg);
+  -ms-transform: rotate(-44deg);
+  transform: rotate(-44deg);
+  
+}
+.alpha { background-color: rgb(46, 67, 182); 
+}
+.alpha1{
+background-color: #7488ca;
+}
+.alpha2{
+background-color: #c24e31;
+}
+.alpha3{
+background-color: #c4c2bb;
+}
+.alpha20{
+color:rgb(1, 1, 3);
+}
+.alpha21{
+color:rgb(255, 255, 255);
+}
+#sidebar{
+  background:  #d4d3ce;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+nav{
+  background-color: #4b40ee; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+footer{
+  background-color: #4b40ee;
+  margin:0px auto;
+  padding: 20px 0px 20px 0px;
+  bottom:0;
+  width:100%;
+
+
+}
+.h{
+   
+  max-width: 100%;
+  height:50px;
+
+}
+.pie-chart {
+  background: radial-gradient(circle closest-side, transparent 66%, white 0),
+    conic-gradient(
+      #4e79a7 0,
+      #4e79a7 38%,
+      #4e79a7 0,
+      #4e79a7 61%,
+      #4e79a7 0,
+       #4e79a7 77%,
+       #c24e31 0,
+       #c24e31 87%,
+       #c24e31 0,
+       #c24e31 93%,
+       #c24e31 0,
+       #c24e31 100%
+    );
+  position: relative;
+  width: 500px;
+  min-height: 350px;
+  margin: 0;
+  outline: 1px solid #ccc;
+}
+.pie-chart h2 {
+  position: absolute;
+  margin: 1rem;
+}
+.pie-chart cite {
+  position: absolute;
+  bottom: 0;
+  font-size: 80%;
+  padding: 1rem;
+  color: gray;
+}
+.pie-chart figcaption {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  font-size: smaller;
+  text-align: right;
+}
+.pie-chart span:after {
+  display: inline-block;
+  content: "";
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.4em;
+  height: 0.8em;
+  border-radius: 0.2em;
+  background: currentColor;
+}

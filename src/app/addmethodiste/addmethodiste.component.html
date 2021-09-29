@@ -1,0 +1,37 @@
+<body>
+<div class="container" >
+
+    <div class="row justify-content-md-center">
+      <div >
+        <div class="sidenav"  id="mySidenav">
+             <a  id="add" routerLink="/addMethodiste" data-toggle="tooltip" data-placement="bottom" title="Ajouter Methodiste">
+                  add
+             </a>
+         
+        </div>
+        
+         
+   </div>
+    <div id="content" class="col-6 align-self-center">       
+        <div class="col-auto">
+            
+              
+           
+           
+              <label class="form-label" for="inputAddress">Email</label>
+              <input type="text" [(ngModel)]="methodiste.email" class="form-control" placeholder="email">
+            </div>
+            <div class="col-auto">
+                <label class="form-label" for="inputAddress">password</label>
+                <input type="text" [(ngModel)]="methodiste.password" class="form-control" placeholder="password">
+              </div>
+            
+            <div class="col-12">
+                <button class="btn btn-outline-secondary "(click)="goBack()">go back</button>
+                <button class="btn btn-outline-info " (click)=save()>save </button>
+            </div>
+        </div>
+        </div>
+        </div>
+</body>
+ 

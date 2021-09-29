@@ -1,0 +1,34 @@
+<div class="table-responsive">
+    <table class="table table-striped">
+      <thead class="thead-inverse">
+        <tr>
+            <th >Validator N°1 </th>
+            <th > Departement N°1 </th>
+            <th >Validator N°2 </th>
+            <th > Departement N°2 </th>
+             <th >file </th>
+            <th > Methodist </th>
+            <th > Start Date </th>
+            <th > End Date </th>
+        </tr>
+      </thead>
+      <tbody class="validations">
+        <tr *ngFor="let stg of EmployeeList">
+
+            <td>{{stg.NomValidateur1}}</td>
+            <td> {{stg.Dep1}}</td>
+
+            <td> {{stg.NomValidateur2}}</td>
+
+            <td> {{stg.Dep2}}</td>
+            <td> {{stg.FileName}}</td>
+
+            <td> {{stg.NomMethodiste}}</td>
+            <td> {{stg.date_deb}}</td>
+            <td> {{stg.date_fin}}</td>
+         
+
+
+      </tbody>
+    </table>
+  </div>

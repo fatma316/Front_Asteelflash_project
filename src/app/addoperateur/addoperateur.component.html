@@ -1,0 +1,37 @@
+<body>
+<div class="container">
+    <div class="row justify-content-md-center">
+      <div >
+        <div class="sidenav"  id="mySidenav">
+             <a  id="add" routerLink="/addOperateur" data-toggle="tooltip" data-placement="bottom" title="Ajouter operateur">
+                  add
+             </a>
+             
+        </div>
+        
+         
+   </div>
+    <div id="content" class="col-6 align-self-center">       
+      
+         
+              
+            <div class="col-auto">
+              <label for="inputEmail4" class="form-label">Registration number</label>
+              <input type="text" [(ngModel)]="operateur.Matricule" class="form-control" placeholder="Registration number">
+            </div>
+            <div class="col-auto">
+              <label for="inputAddress" class="form-label">Password</label>
+              <input type="email" [(ngModel)]="operateur.password" class="form-control" placeholder="Password">
+            </div>
+           
+            
+            <div class="col-12">
+
+                <button type="button" class="btn btn-primary"(click)="goBack()">go back</button>
+                            <button type="button" class="btn btn-danger"(click)=save()>save </button>
+
+               </div>
+        </div>
+      </div>
+    </div>
+</body>

@@ -1,0 +1,42 @@
+<body>
+<div class="container">
+    <div class="row">
+         
+         <div >
+              <div class="sidenav"  id="mySidenav">
+                   
+                   <a id="home" routerLink="/dashboard_validator">
+                      home
+                   </a>
+              </div>
+              
+               
+         </div>
+         <div class="col-10 align-self-center" >
+         <h2 id="titre" class="align-self-center"> Projects</h2>
+         <table class="table table-light table-striped table-hover">
+              
+              <thead>
+                   <tr>
+                     
+                     <th scope="col">Project ID </th>
+                     <th scope="col">Project Name</th>
+                     <th scope="col">REFName</th>
+                     
+                   </tr>
+              </thead>
+              <tbody class="projets">
+                   <tr *ngFor="let stg of projets">
+                        <td><a id="nom" routerLink="/detailformateur/{{stg.projectId}}">{{stg.projectId}} </a></td>
+                        <td> {{stg.projectName}}</td>
+                        <td> {{stg.REFName}}</td>
+                        
+                      </tr> 
+              </tbody>
+         </table>
+         </div>
+ 
+         
+    </div>
+    </div>
+</body>
